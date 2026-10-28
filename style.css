@@ -1,0 +1,102 @@
+:root {
+    color-scheme: light dark;
+    --text: #1d1d1f;
+    --secondary: #6e6e73;
+    --background: #ffffff;
+    --card: #f5f5f7;
+    --accent: #0071e3;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #f5f5f7;
+        --secondary: #a1a1a6;
+        --background: #000000;
+        --card: #1c1c1e;
+        --accent: #2997ff;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Noto Sans Georgian", "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+}
+
+header { margin-bottom: 32px; }
+
+.app-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--secondary);
+    letter-spacing: 0.02em;
+}
+
+h1 { font-size: 34px; line-height: 1.15; margin: 4px 0 8px; }
+h2 { font-size: 22px; margin: 32px 0 8px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.lang-switch {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--card);
+    margin-bottom: 24px;
+}
+
+.lang-switch a {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 20px 22px;
+    margin: 20px 0;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+.button {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 12px;
+    margin-top: 4px;
+}
+
+.button:hover { text-decoration: none; opacity: 0.9; }
+
+.muted { color: var(--secondary); font-size: 15px; }
+
+section + section {
+    border-top: 1px solid color-mix(in srgb, var(--secondary) 30%, transparent);
+    margin-top: 48px;
+    padding-top: 40px;
+}
+
+footer {
+    margin-top: 56px;
+    color: var(--secondary);
+    font-size: 14px;
+}
